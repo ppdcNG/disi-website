@@ -123,10 +123,10 @@
                             <button class="btn" id="menu--sec">Secondary School Students</button>
                         </li>
                         <li class="list-group-item">
-                            <button class="btn">Safety tips for parents</button>
+                            <button class="btn" id="menu--parents">Safety tips for parents</button>
                         </li>
                         <li class="list-group-item">
-                            <button class="btn">Safety tips for teachers</button>
+                            <button class="btn" id="menu--teach">Safety tips for teachers</button>
                         </li>
                     </ul>
 
@@ -569,13 +569,95 @@
 
                         </section>
 
-                        <!-- <section class="container section__teachers" id="teachers">
-                            <h5>Teachers</h5>
+                        <!-- section 3: for parents  -->
+                        <section class="container section__parents mt-5" id="teachers">
+                            <h5>Online Safety Advice: Top Tips for Parents</h5>
+                            <hr width="500" align="left" />
+
+                            <ol class="disc">
+                                <li>Establish and agree with your children the digital safety rules in your home.</li>
+                                <li>Get your children to write down and paste the rules in their rooms</li>
+                                <li>Discover the Internet together with your children and spend time having fun with
+                                    them online</li>
+                                <li>Encourage your child never to share their personal information with anyone they
+                                    don't know or websites they're unsure of</li>
+                                <li>Have a conversation with your children to never meet in person their online friends
+                                    without consent</li>
+                                <li>Encourage your children to always check with you before they post pictures of
+                                    themself or others online</li>
+                                <li>Teach your children to always inform you whether someone send them a rude or mean
+                                    message</li>
+                                <li>Encourage your children never to respond to mean or rude texts, messages, and emails
+                                </li>
+                                <li>Tell your children that if they wouldn’t say something to another person’s face,
+                                    that they should not text it or post it online</li>
+                                <li>Teach them never to download or install software without your consent</li>
+                                <li>Set up the privacy settings of their social networking sites</li>
+                                <li>Encourage them to inform you If anything makes them feel uncomfortable online</li>
+                            </ol>
+
+                            <div>
+                                <h6>Parental control App</h6>
+
+                                <p class="text-justify">
+                                    <a href="https://families.google.com/familylink/">Google Family Link</a> is a
+                                    parental control App that helps you create healthy digital habits for your family.
+                                    Whether your children are younger or in their teens, the Family Link app lets you
+                                    set digital ground rules to help guide them as they learn, play, and explore online.
+                                </p>
+                                <p class="text-justify">
+                                    Family Link app can be downloaded from any Google play store. As a parent/guardian
+                                    download the parent version on your device while you download the children’s version
+                                    on your child's device. Click here to learn more about this App.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h6>Educational Resources</h6>
+
+                                <ol>
+                                    <li class="my-2">YouTube Kids is an App created by YouTube to give kids a more contained
+                                        environment that makes it simpler and more fun for them to explore on their own,
+                                        and easier for parents and caregivers to guide their journey as they discover
+                                        new and exciting interests along the way. Click <a
+                                            href="https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en">here</a>
+                                        to learn more. This App has
+                                        been curated with selected content, parental control features, and filtering of
+                                        videos deemed inappropriate viewing by kids 12 and under.</li>
+                                    <li><a href="https://bolo.withgoogle.com/intl/en/">Bolo</a> is an App launched by
+                                        Google to help children have fun while they learn to
+                                        read. It is designed for primary school children. Bolo app can be downloaded for
+                                        free from Google's Play Store. The app can also work offline and does not
+                                        require an active internet connection. Online Safety Tips for Teachers.</li>
+                                </ol>
+
                         </section>
 
-                        <section class="container section__parents" id="parents">
-                            <h5>Parents</h5>
-                        </section> -->
+                        <!-- section 4: for teachers  -->
+                        <section class="container section__teachers mt-5" id="parents">
+                            <h5>Online Safety Tips for Teachers</h5>
+                            <hr width="500" align="left" />
+                            <p>
+                                Every teacher has a responsibility in ensuring the online safety of their students. You
+                                need to be able to support your students and educate them on the correct way to use the
+                                internet.
+                            </p>
+
+                            <p>Online Safety Tips</p>
+                            <ol>
+                                <li>Improve your online safety knowledge in other to be able to efficiently and effectively help your students</li>
+                                <li>As a teacher consider your own digital footprint and security</li>
+                                <li>Ensure you always protect your own digital reputation</li>
+                                <li>Develop and agree with your students about the class digital safety rules</li>
+                                <li>Develop with your students the digital citizen pledge and get them to recite the pledge often</li>
+                                <li>Always teach your students about online safety, basic safety tips and ensure you are a role model</li>
+                                <li>Have an open and honest online safety conversation with your students and find out what they do online when they’re outside the classroom</li>
+                                <li>Always be available and ready to help your students with any online related safety issues</li>
+                                <li>Have a line in place for all student</li>
+                                <li>Ensure the installation of safety software in all gadgets brought into the classroom and ensure that privacy settings are frequently updated</li>
+                            </ol>
+
+                        </section>
 
                         <!-- bottom buttons  -->
                         <section class="d-flex justify-content-center" id="buttons">
@@ -585,6 +667,12 @@
                                 </li>
                                 <li class="list-group-item">
                                     <button id="secBtn" class="btn">For Secondary School Pupils</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button id="parentBtn" class="btn">For Parents</button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button id="teachBtn" class="btn">For Teachers</button>
                                 </li>
                             </ul>
                         </section>
@@ -641,6 +729,8 @@
 
         let pryBtn = $("#pryBtn");
         let secBtn = $("#secBtn");
+        let parentBtn = $("#parentBtn");
+        let teachBtn = $("#teachBtn");
 
         function btnColor(x, y) {
             x.css({ "backgroundColor": "#d8e9ec" }, { "color": "#fff" })
@@ -664,11 +754,11 @@
                     hideSection(secSection, prySection, teachSection, parentSection);
                     btnColor(secBtn, pryBtn);
                     break;
-                case 'teachBtn':
-                    hideSection(teachSection, prySection, secSection, parentSection);
-                    break;
                 case 'parentBtn':
                     hideSection(parentSection, prySection, secSection, teachSection);
+                    break;
+                case 'teachBtn':
+                    hideSection(teachSection, prySection, secSection, parentSection);
                     break;
                 case 'menu--pry':
                     removeAddClass($(this));
@@ -677,6 +767,14 @@
                 case 'menu--sec':
                     removeAddClass($(this));
                     secBtn.trigger("click");
+                    break;
+                case 'menu--parents':
+                    removeAddClass($(this));
+                    parentBtn.trigger("click");
+                    break;
+                case 'menu--teach':
+                    removeAddClass($(this));
+                    teachBtn.trigger("click");
                     break;
                 case 'menu--intro':
                     removeAddClass($(this));
